@@ -82,6 +82,9 @@ module.exports = function(config, options){
           }
         }, this);
       }
+      else{
+        pendingModules.remove(filename);
+      }
 
       if(pendingModules.isEmpty()){
         onDone && onDone();
